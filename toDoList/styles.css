@@ -1,0 +1,113 @@
+:root {
+  --darkGrey: #937c8e;
+  --liteGrey: #af98aa;
+  --blank: #fff4fd;
+  --rouge: #6b2c42;
+  --darkRed: #370818;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: monospace;
+}
+body {
+  background-color: var(--rouge);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header {
+  max-width: 800px;
+  width: 100%;
+  padding: 2rem 1rem;
+  margin: 0 auto;
+}
+header h1 {
+  margin-bottom: 2px solid;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  border-bottom: 0.2rem solid var(--darkGrey);
+  color: var(--darkGrey);
+}
+#newTask {
+  display: flex;
+}
+input, button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+#newTaskText {
+  flex: 1 1 0%;
+  font-size: 1.25rem;
+  margin-right: 1rem;
+  border: 0.25rem;
+  background-color: var(--darkGrey);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+#newTaskAdd {
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  background: linear-gradient(to right, hotpink, var(--blank));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+main {
+  flex: 1 1 0%;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+.taskList h2 {
+  font-size: 1.5;
+  padding: 1rem;
+  color: var(--darkGrey);
+  border-bottom: 0.25rem solid var(--darkGrey );
+}
+#tasks .task {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 1rem;
+  padding: .5rem;
+  background-color: var(--darkGrey);
+}
+.task .content {
+  flex: 1 1 0%;
+  padding: 1rem;
+}
+.task .content .text {
+  color: var(--rouge);
+  font-size: 1.5rem; 
+}
+.task .actions {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+.task .actions button {
+  margin:0 0.5rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+.task .actions button:hover {
+  opacity: 0.8;
+}
+.task .actions button:active {
+  opacity: 0.6;
+}
+
+.task .actions .edit {
+  background: linear-gradient(to right, hotpink, var(--blank));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.task .actions .deleteBtn {
+  color: var(--rouge)
+}
+
+
