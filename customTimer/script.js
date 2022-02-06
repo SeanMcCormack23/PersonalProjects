@@ -15,7 +15,7 @@ ourDate.addEventListener("change", function () {
 
   // console.log(ourDate.value);
   function countdown() {
-    // const inputtedDate = ourDate.value;
+    
     const today = new Date();
 
     const totalSeconds = (dateEntered - today) / 1000;
@@ -33,13 +33,11 @@ ourDate.addEventListener("change", function () {
     secondsNumber.innerText = formatTime(seconds);
 
   }
-// countdown();
-// countInterval = setInterval(countdown, 1000);
-//   countInterval;
+//here i set the countdown timer to run for 10 iterations at 1000ms gap between each, and then the date can be edited
 var x = 0;
 const countInterval = setInterval(function() {
   countdown();
-  if (++x == 30){
+  if (++x == 10){
     window.clearInterval(countInterval);
   }
 }, 1000);
@@ -63,11 +61,7 @@ form.addEventListener("submit", (e) => {
 
   extraInfo();
   theOccasion();
-  
-
- 
-
-})
+});
 
 function extraInfo() {
   const name = fname.value + " " + lname.value;
@@ -77,8 +71,9 @@ function extraInfo() {
     heading.innerHTML = "It is " + name + "'s " + reasoning + " in...";
   }
   personalise();
-}
+};
 
+//this is how the background image is decided, based on the occasion the user has input
 function theOccasion() {
   if (reason.value == "birthday") {
     document.body.style.backgroundImage = "url('bday.jpg')";
@@ -93,7 +88,7 @@ function theOccasion() {
   } else if (reason.value == "deadline") {
     document.body.style.backgroundImage = "url('deadline.jpg')";
   }
-}
+};
 
 
 
