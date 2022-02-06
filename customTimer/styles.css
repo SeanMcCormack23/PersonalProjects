@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Supermercado One', cursive;;
+}
+body {
+  margin: 0;
+  background-image: url("field.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  min-width: 100vw;
+  
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.head {
+text-align: center;
+}
+
+.timer {
+  display: flex;
+  margin: 1rem 2rem;
+  justify-content: center;
+}
+.larger {
+  font-size: 6rem;
+  margin: 0 2rem;
+}
+#customDate {
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+  
+}
+#userInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2rem 0;
+  
+}
+
+.unit {
+  text-align: center;
+}
+.unit span {
+  font-size: 1.5rem;
+}
+

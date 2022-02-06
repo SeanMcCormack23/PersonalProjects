@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <title>Custom Timer</title>
+</head>
+
+<body>
+
+  <h1 class="head" id="heading">A More Advanced Countdown Timer</h1>
+  <h2 class="head">Enter some more info for a personalised experience!</h2>
+
+  <div class="timer">
+    <div class="unit day-el">
+      <p class="larger" id="days">0</p>
+      <span>Days</span>
+    </div>
+    <div class="unit  hour-el">
+      <p class="larger" id="hours">0</p>
+      <span>Hours</span>
+    </div>
+    <div class="unit minute-el">
+      <p class="larger" id="minutes">0</p>
+      <span>Minutes</span>
+    </div>
+    <div class="unit second-el">
+      <p class="larger" id="seconds">0</p>
+      <span>Seconds</span>
+    </div>
+  </div>
+  <!-- date box -->
+  <form id="customDate">
+    <input type="date" value="" name="c-Date" id="theDate">
+  </form>
+<!-- additional user info -->
+  <form id="userInfo">
+    <input type="text" name="fname" id="fname" value="">
+    <input type="text" name="lname" id="lname" value="">
+    <select name="reason" id="reason">
+      <option value="birthday">Birthday</option>
+      <option value="anniversary">Anniversary</option>
+      <option value="new year">New year</option>
+      <option value="holiday">Holiday</option>
+      <option value="operation">Operation</option>
+      <option value="deadline">Deadline</option>
+    </select>
+    <input type="submit" value="submit" >
+
+  </form>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
