@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Seans Weather API</title>
+
+</head>
+<body>
+    <header>
+        <h1>Seans Weather Api</h1>
+        <h2 id="city">Choose any city to see the current weather!</h2>
+    </header>
+
+    <form id="cityData">
+        <input type="text" id="cityName" placeholder="Enter a city name"><br>
+        <input type="submit" value="Get Weather Information" id="weather_data">
+        <span class="msg"></span>
+    </form>
+       
+    <div class="api_call_results">
+        <div class="container">
+            <ul class="cities">
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <p id="date">Todays Date: </p>
+        <p id="time">Current Time: </p>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
