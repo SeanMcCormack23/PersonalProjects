@@ -8,6 +8,7 @@ const list = document.querySelector(".api_call_results .cities");
 
 
 
+
 form.addEventListener("submit", (e) => {
     e.preventDefault(); //stops the page reloading
     const listItems = list.querySelectorAll(".api_call_results .cities");
@@ -18,7 +19,10 @@ form.addEventListener("submit", (e) => {
     
     .then(data => {
         const { main, name, sys, weather } = data;
+        //need to get the icons working 
 
+        const iconCode = `http://openweathermap.org/img/wn/"$(weather[0]["icon"]}@2x.png)`;
+       
 
         const li = document.createElement("li");
         li.classList.add("city");
@@ -29,10 +33,11 @@ form.addEventListener("submit", (e) => {
           <span>${name}</span>
           <sup>${sys.country}</sup>
         </h2>
-
         <div class="city-temp">${Math.round(main.temp)}<sup>°C</sup></div>
         <div class="current-weather">${weather[0].description}
-        `;
+        <figure>
+        <img id="iconID" class="city-icon" src="$(iconCode)" alt="weather Icon">
+        </figure>`;
 
         li.innerHTML = markup;
         list.appendChild(li);
@@ -59,4 +64,3 @@ function updateTimeAndDate() {
 
 }
 updateTimeAndDate();
-
