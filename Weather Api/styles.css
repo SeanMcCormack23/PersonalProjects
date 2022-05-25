@@ -32,17 +32,10 @@
   input::placeholder {
     color: #FFEECF;
   }
-
-  .box {
-    width: 140px;
-    height: 140px;
-    border: 1px solid black;
-    padding: 15px;
-  }
   img {
     display: block;
     max-width: 100%;
-    height: auto;
+    height: 20px;
   }
   .api_call_results .city-icon {
     margin-top: 10px;
@@ -53,10 +46,7 @@
   ul {
     list-style: none;
   }
-  .container_cities {
-      background: #D36582;
-      /* padding: 10px; */
-  }
+  
   
   @media screen and (max-width: 700px) {
     #cityData form {
@@ -71,7 +61,7 @@
   }
   .api_call_results .city {
     position: relative;
-    margin: 20px 0;
+    margin: 10px 0;
     padding: 40px 10%;
     border-radius: 20px;
     background: #253C78;

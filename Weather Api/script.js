@@ -19,11 +19,8 @@ form.addEventListener("submit", (e) => {
     
     .then(data => {
         const { main, name, sys, weather } = data;
-        //need to get the icons working 
-
-        const iconCode = `http://openweathermap.org/img/wn/"$(weather[0]["icon"]}@2x.png)`;
-       
-
+        //need to get the icons working      
+        const icon = "http://openweathermap.org/img/wn/"+weather[0].icon+"@2x.png";
         const li = document.createElement("li");
         li.classList.add("city");
 
@@ -36,7 +33,7 @@ form.addEventListener("submit", (e) => {
         <div class="city-temp">${Math.round(main.temp)}<sup>°C</sup></div>
         <div class="current-weather">${weather[0].description}
         <figure>
-        <img id="iconID" class="city-icon" src="$(iconCode)" alt="weather Icon">
+        <img id="iconID" class="city-icon" src="${icon}" alt="weather Icon">
         </figure>`;
 
         li.innerHTML = markup;
