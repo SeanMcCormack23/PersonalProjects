@@ -1,69 +1,76 @@
-* {
-    box-sizing: border-box;
-    /* margin: 0; */
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.3rem;
-    color: #FFEECF
+:root {
+  --darkblue: #5438DC;
+  --darkestblue: #1B0F57;
+  --blue: #357DED;
+  --lightblue: #56EEF4;
+  --cream: #F3E2E6;
+
+}* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+}
+
+body {
+  color: var(--lightblue);
+  background-color: var(--darkblue);
+}
+
+header {
+  margin: 20px 0;
+  padding: 15px;
+}
+
+form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 8px;
+  margin: 15px;
+  border-bottom: 1px solid var(--lightblue);
+}
+input:focus {
+  color: var(--lightblue);
+}
+
+input::placeholder, button {
+  color: var(--lightblue);
+}
+
+ul {
+  list-style: none;
+}
+
+@media screen and (max-width: 700px) {
+  #cityData form {
+    flex-direction: column;
   }
-  
-  body {
-    background-color: #2B59C3;
+}
+@media screen and (max-width: 700px) {
+  .container_date, header {
+    text-align: center;
   }
-  
-  header {
-    margin: 20px 0;
-    padding: 15px;
-  }
-  
-  form {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  
-  input,
-  button {
-    border: 2px solid #D36582;
-    outline: none;
-    background: none;
-    padding: 8px;
-  }
-  
-  input::placeholder {
-    color: #FFEECF;
-  }
-  img {
-    display: block;
-    max-width: 100%;
-    height: 20px;
-  }
-  .api_call_results .city-icon {
-    margin-top: 10px;
-    width: 100px;
-    height: 100px;
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  
-  @media screen and (max-width: 700px) {
-    #cityData form {
-      flex-direction: column;
-    }
-  }
-  
-  .api_call_results .cities {
-    display: grid;
-    grid-gap: 32px 20px;
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .api_call_results .city {
-    position: relative;
-    margin: 10px 0;
-    padding: 40px 10%;
-    border-radius: 20px;
-    background: #253C78;
-    color: #C9A690;
-  }
+}
+
+.api_call_results .cities {
+  display: grid;
+  grid-gap: 32px 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.api_call_results .city {
+  position: relative;
+  padding: 40px 10%;
+  border-radius: 20px;
+  background: var(--darkestblue);
+  color: var(--darkblue);
+}
+.container_date {
+  margin: 0.3rem 3rem;
+}
