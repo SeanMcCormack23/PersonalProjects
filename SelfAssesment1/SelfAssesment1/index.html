@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <title>Flex Survey</title>
+</head>
+
+<!-- Name, email, dob --- DONE ---   -->
+<!-- Activity of preference (radio) --- DONE ---   -->
+<!-- Frequency of activity (checkbox) --- DONE ---   -->
+<!-- Reason for participation - ENTIRE FORM RESPONSIVE --- DONE ---    -->
+<!-- Various images of different sports - Responsive -->
+
+<body>
+  <main>
+    <header>
+      <h1>Why do we excercise?</h1>
+      <ul>
+        <li>Increased energy levels</li>
+        <li>Better mood</li>
+        <li>Improve phsyical condition</li>
+        <li>Appetite stimulation</li>
+        <li>Effective way to burn calories</li>
+      </ul>
+      <p class="divider">You should try to get the recommended amount of exercise for <i>your</i> age. If you can do it,
+        the payoff is that you will feel better, help prevent or control many diseases, and likely even live longer.</p>
+    </header>
+    <section>
+      <!-- 1 form, 1 section -->
+      <form>
+        <!-- Start basic info  -->
+        <div class="divider">
+          <fieldset id="basicInfo">
+            <legend>Give us some information about you</legend>
+            <label> Name&nbsp;
+              <input type="text" name="name" placeholder="Full name..." required />
+            </label>
+            <label> Email &nbsp;
+              <input type="email" name="email" placeholder="Enter your email..." required />
+            </label>
+            <label> D.O.B &nbsp;
+              <input type="date" name="dob" required />
+            </label>
+          </fieldset>
+        </div>
+        <!-- END BASIC INFO -->
+
+        <div class="divider">
+          <fieldset id="prefferedActivity">
+            <legend>What is your preffered form of excercise?</legend>
+
+            <label>
+              <input type="radio" value="gym" name="activity" /> GYM
+            </label>
+            <label>
+              <input type="radio" value="football" name="activity" /> FOOTBALL
+            </label>
+            <label>
+              <input type="radio" value="basketball" name="activity" /> BASKETBALL
+            </label>
+            <label>
+              <input type="radio" value="running" name="activity" /> RUNNING
+            </label>
+            <label>
+              <input type="radio" id="other" value="other" name="activity" /> OTHER
+              <input type="text" id="otherTextbox" placeholder="Enter your sport here..." />
+            </label>
+          </fieldset>
+        </div>
+        <!-- END PREFFERED ACTIVITY -->
+
+        <!-- Start frequency of activity -->
+        <div class="divider">
+          <fieldset>
+            <legend>What days of the week do you engage in excercise?</legend>
+            <label><input type="checkbox" name="1" /> Monday</label>
+            <label><input type="checkbox" name="2" /> Tuesday</label>
+            <label><input type="checkbox" name="3" /> Wednesday</label>
+            <label><input type="checkbox" name="4" /> Thursday</label>
+            <label><input type="checkbox" name="5" /> Friday</label>
+            <label><input type="checkbox" name="6" /> Saturday</label>
+            <label><input type="checkbox" name="7" /> Sunday</label>
+          </fieldset>
+        </div>
+        <!-- End frequency of activity -->
+        <!-- Start user comments area -->
+        
+          <fieldset id="comments">
+            <legend>Why do you like to excercise?</legend>
+            <label>
+              <input type="textarea" id="textBox" class="commentBox" />
+            </label>
+          </fieldset>
+        
+        <!-- End user comments area -->
+
+      </form>
+      <button class="btn-submit" type="submit" name="submit">Submit</button>
+
+      <div id="container">
+        <img src="IMG_20211112_175757.jpg" alt="IMG_20211112_175757.jpg" alt="supercaliber">
+        <img src="footie3.jpg" alt="footie3">
+        <img src="IMG_20211010_151240.jpg" alt="domane2">
+        <img src="footie1.jpg" alt="footie1">
+        <img src="IMG_20211121_123716.jpg" alt="3bikes">
+        <img src="footie2.jpg" alt="footie2">
+        <img src="IMG_20211128_120604.jpg" alt="domane1">
+        <img src="footie4.jpg" alt="footie4">
+      </div>
+    </section>
+
+
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+:root {
+  --brightBlue: #51e2f5;
+  --blueGreen: #9df9ef;
+  --dustyWhite: #ecece3;
+  --pinkSand: #ffa8B6;
+  --darkSand: #a28089;
+}
+html {
+
+  font-size: 18px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  height: 100vh;
+  background-color: var(--darkSand);
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+h1, p {
+  text-align: center;
+  margin: 0 auto;
+}
+p {
+  display: block;
+}
+ul {
+  list-style-type: none;
+  text-align: center;
+}
+.divider {
+  border-bottom: 1px solid black;
+  width: 98%;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+label {
+  display: block;
+  margin: 3px 0;
+}
+input[id="otherTextbox"]{
+  margin-left: 15px;
+}
+fieldset {
+  margin: 10px auto;
+  width: 96%;
+  min-width: 260px;
+  max-width: 600px;
+  border: 1px solid var(--dustyWhite);
+}
+
+
+input[type="date"], input[type="text"], input[type="email"] {
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--dustyWhite);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+input[type="date"], ::placeholder {
+  color: grey;
+  margin-left:  -2px;
+}
+
+.commentBox {
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+  /* above 4 stylings remove textarea border */
+  width: 50%;
+  height: 200px;
+}
+.btn-submit {
+  width: 50%;
+  height: 30px;
+  border: none;
+  margin: 1rem auto;
+  display: block;
+  background-color: var(--brightBlue);
+
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3px;
+}
+img {
+  object-fit: cover;
+  width: 24%;
+  height: 300px;
+  border-radius: 9px;
+  padding: 0 3px;
+  margin: 20px 0;
+}
+
+/* CANT BE 800px WITHOUT BEING 600px ASWELL
+NEED TO PUT IN CORRECT ORDER!!*/
+@media (max-width: 800px){
+  h1, p, fieldset {
+    width: 75%;
+  }
+}
+@media (max-width: 800px){
+  #container img {
+    width: 46%;
+  }
+}
+@media (max-width: 600px){
+  h1, p, fieldset {
+    width: 50%;
+  }
+}
+@media (max-width: 600px) {
+  #container img {
+    width: 95%;
+  }
+}
+
