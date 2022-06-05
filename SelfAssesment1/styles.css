@@ -1,0 +1,70 @@
+html {
+  font-size: 18px;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  height: 100vh;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+h1, p {
+  text-align: center;
+  margin: 0 auto;
+}
+p {
+  display: block;
+}
+.divider {
+  border-bottom: 1px solid black;
+  width: 98%;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+label {
+  display: block;
+  margin: 3px 0;
+}
+input[id="otherTextbox"]{
+  margin-left: 15px;
+}
+fieldset {
+  margin: 0 auto;
+  width: 96%;
+  border: none;
+}
+
+input[type="date"], input[type="text"], input[type="email"] {
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+input[type="date"], ::placeholder {
+  color: grey;
+  margin-left:  -2px;
+}
+fieldset:not(#comments) {
+  border: 1px solid gold;
+}
+.commentBox {
+  width: 300px;
+  height: 150px;
+}
+@media (max-width: 800px){
+  h1, p, fieldset {
+    width: 75%;
+  }
+}
+@media (max-width: 600px){
+  h1, p, fieldset {
+    width: 50%;
+  }
+}
+@media (min-width: 800px){
+  fieldset #comments {
+    border: 1px solid gold;
+  }
+  .divider {
+    border-bottom: 1px solid gold;
+  }
+}
