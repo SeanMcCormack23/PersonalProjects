@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Tahoma, sans-serif;
+}
+
+html {
+  font-size: 16px;
+
+}
+
+#navbar {
+  width: 200px;
+  height: 100vh;
+  border: 1px solid black;
+  position: fixed;
+  overflow: hidden;
+}
+
+#navbar>header {
+  font-size: 1.3rem;
+  padding: 4px;
+  text-decoration: underline;
+
+}
+
+#navbar a {
+  text-decoration: none;
+  display: block;
+  margin: 10px 5px;
+  color: black;
+}
+
+#navbar a:nth-child(odd) {
+  background-color: rgba(128, 128, 128, 0.582);
+}
+
+#navbar a:nth-child(even) {
+  background-color: lightgrey;
+}
+
+section {
+  margin-left: 200px;
+  padding: 20px 5px;
+}
+
+.main-section>header {
+  font-weight: 800;
+  margin: 0 0.8rem;
+}
+
+section>h4 {
+  margin: 0 1rem;
+}
+
+p,
+h3 {
+  padding: 0.8rem;
+}
+
+code {
+  display: block;
+  background-color: lightgrey;
+  width: 180px;
+  padding: 4px;
+}
+
+.space {
+  margin: 10px 12px;
+}
+
+.grid {
+  margin: 20px 5px;
+  height: 150px;
+  width: 210px;
+  border: 1px solid;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, 1fr);
+
+}
+
+.grid>div {
+  border: 1px solid;
+}
+
+.grid>.brd {
+  border-left: 2px solid red;
+}
+
+.lists>h4 {
+  padding: 1rem;
+}
+
+#original {
+  font-size: 2rem;
+  margin: 0 auto;
+  color: black;
+}
+
+@media (max-width:780px) {
+  html {
+    text-align: justify;
+  }
+}
+
+@media (min-width:800px) {
+  .main-section {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width:1200px) {
+  section {
+    border-bottom: 2px solid goldenrod;
+    margin-top: 5px;
+  }
+
+  #navbar {
+    border: none;
+  }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width:device-width, intial-scale: 1.0">
+    <title>Techical Documentation</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+  </head>
+  <body>
+    <main id="main-doc">
+      <nav id="navbar">
+        <header>Grid Documentation</header>
+        <a class="nav-link" href="#Intro_to_Grid">Intro to Grid</a>
+        <a class="nav-link" href="#Important_Terminology">Important Terminology</a>
+        <a class="nav-link" href="#Grid_Properties_Parent">Grid Properties Parent</a>
+        <a class="nav-link" href="#Grid_Properties_Child">Grid Properties Child</a>
+        <a class="nav-link" href="#Credits"/>Credits</a>
+      </nav>
+
+      <section class="main-section" id="Intro_to_Grid">
+        <header id="head-1">Intro to Grid</header>
+        <p>All of the information presented here comes from: <a href="https://css-tricks.com/snippets/css/complete-guide-grid/#aa-introduction">A Complete CSS Guide to Grid</a>. This technical documentation page is to display knowledge of HTML and CSS, it is by no means a comprehensive guide on grid itself.
+        </p>
+        <p>CSS Grid Layout (aka “Grid” or “CSS Grid”), is a two-dimensional grid-based layout system that, compared to any web layout system of the past, completely changes the way we design user interfaces.</p>
+        <p>Grid is the very first CSS module created specifically to solve the layout problems we’ve all been hacking our way around for as long as we’ve been making websites.</p>
+      </section>
+      <section class="main-section" id="Important_Terminology">
+        <header id="head-2">Important Terminology</header>
+        <p>Before diving into the concepts of Grid it’s important to understand the terminology. Since the terms involved here are all kinda conceptually similar, it’s easy to confuse them with one another if you don’t first memorize their meanings defined by the Grid specification.</p>
+        <h4>Grid Container</h4><p>
+The element on which display: grid is applied. It’s the direct parent of all the grid items. In this example class="container", is the grid container.</p>
+<!-- gridContainer -->
+
+
+<div class="space">
+<code>div class="container"</code>
+  <code>div class="item-1"</code>
+  <code>div class="item-2"</code>
+  </div>
+
+<h4>Grid Item</h4>
+<p>The children (i.e. direct descendants) of the grid container. Here the item elements are grid items, but sub-item isn’t.</p>
+  <div class="space">
+  <code>div class="container"</code>
+  <code>div class="item"</code>
+  <code>div class="item"</code>
+  <code>  &nbsp; p class="sub-item"</code>
+  <code>div</code>
+  <code>div class="item"</code>
+  </div>
+<!-- gridItem -->
+
+<h4>Grid Line</h4>
+<p>
+  The dividing lines that make up the structure of the grid. They can be either vertical (“column grid lines”) or horizontal (“row grid lines”) and reside on either side of a row or column. Here the red line is an example of a column grid line.
+</p>
+<div class="grid">
+  <div class="grid-item">1</div>
+  <div class="grid-item">2</div>
+  <div class="grid-item brd">3</div>
+  <div class="grid-item">1</div>
+  <div class="grid-item">2</div>
+  <div class="grid-item brd">3</div>
+</div>
+
+<!-- NEED TO FIX THE BOX -->
+
+<h4>Grid Cell</h4>
+<p>
+  The space between two adjacent row and two adjacent column grid lines. It’s a single “unit” of the grid.
+</p>
+<h4>Grid Track</h4>
+<p>
+  The space between two adjacent grid lines. You can think of them as the columns or rows of the grid. 
+</p>
+<h4>Grid Area</h4>
+<p>
+  The total space surrounded by four grid lines. A grid area may be composed of any number of grid cells.
+</p>
+      </section>
+      <section class="main-section" id="Grid_Properties_Parent">
+        <header id="head-3">Grid Properties Parent</header>
+        <div class="lists">
+          <h4>display</h4>
+          <p>Defines the element as a grid container and establishes a new grid formatting context for its contents.</p>
+          <ul>Values
+          <li>grid- generates a block level grid.
+          </li>
+          <li>inline- generates an inline level grid.
+          </li>
+          </ul>
+          
+          <h4>grid-template-columns, </br>
+          grid-template-rows</h4>
+          <p>Defines the columns and rows of the grid with a space-separated list of values. The values represent the track size, and the space between them represents the grid line.</p>
+          <ul>Values
+            <li>track-size – can be a length, a percentage, or a fraction of the free space in the grid (using the fr unit).</li>
+            <li>
+              line-name – an arbitrary name of your choosing.
+            </li>
+          </ul>
+
+
+          <h4>grid-template-area</h4>
+          <p>Defines a grid template by referencing the names of the grid areas which are specified with the grid-area property. Repeating the name of a grid area causes the content to span those cells. A period signifies an empty cell. The syntax itself provides a visualization of the structure of the grid.</p>
+          <ul>Values
+            <li>grid-area-name – the name of a grid area specified with grid-area
+              </li> 
+              <li>
+                <strong>.</strong> – a period signifies an empty grid cell
+              </li>
+              <li>
+                none – no grid areas are defined
+              </li>
+          </ul>
+        </div>
+      </section>
+
+
+      <section class="main-section" id="Grid_Properties_Child">
+        <header id="head-4">Grid Properties Child</header>
+       <div class="lists">
+         <h4>grid-coloumn-start, </br>
+         grid-coloumn-end, </br>
+         grid-row-start, </br>
+         gris-row-end</h4>
+
+         <p>Determines a grid item’s location within the grid by referring to specific grid lines. grid-column-start/grid-row-start is the line where the item begins, and grid-column-end/grid-row-end is the line where the item ends.</p>
+        <ul>Values
+          <li>line – can be a number to refer to a numbered grid line, or a name to refer to a named grid line.</li>
+          <li>span number – the item will span across the provided number of grid tracks.</li>
+          <li>span name – the item will span across until it hits the next line with the provided name</li>
+          <li>auto – indicates auto-placement, an automatic span, or a default span of one</li>
+          </ul>
+        </div>
+        
+      </section>
+      <section class="main-section" id="Credits">
+        <header id="head-5">Credits</header>
+        <p>All credit to the authour of this article.
+          Please take the time to read the full guide, you can find it here: </p>
+          <a href="https://css-tricks.com/snippets/css/complete-guide-grid/#aa-introduction" id="original">A Complete Guide to CSS Grid</a>
+        
+      </section>
+      
+      </main>
+  </body>
+</html>
